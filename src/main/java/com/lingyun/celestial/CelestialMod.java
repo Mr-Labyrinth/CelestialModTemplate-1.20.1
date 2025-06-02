@@ -1,5 +1,8 @@
 package com.lingyun.celestial;
 
+import com.lingyun.celestial.block.CelestialModBlocks;
+import com.lingyun.celestial.item.CelestialModItemGroups;
+import com.lingyun.celestial.item.CelestialModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,7 +21,11 @@ public class CelestialMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+		CelestialModItems.registerItems();// 物品注册初始化
 
+		CelestialModItemGroups.registerGroups();// 物品栏辅助注册方法
+
+		CelestialModBlocks.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

@@ -3,6 +3,7 @@
 	"package": "com.lingyun.celestial.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"AbstractFurnaceBlockEntityMixin",
 		"ExampleMixin"
 	],
 	"injectors": {
